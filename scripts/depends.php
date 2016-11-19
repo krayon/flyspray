@@ -191,6 +191,6 @@ $jasonData = json_encode($resultData);
 $page->assign('jasonData', $jasonData);
 $page->assign('task_id', $id);
 
-$page->setTitle(sprintf('FS#%d : %s', $id, L('dependencygraph')));
+$page->setTitle(sprintf('QB#%d : %s', $id, L('dependencygraph')));
 $page->pushTpl('depends.tpl');
 ?>
