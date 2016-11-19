@@ -50,7 +50,7 @@ class syntax_plugin_fslink extends DokuWiki_Syntax_Plugin {
      
     function connectTo($mode) {
         // Word boundaries?
-        $this->Lexer->addSpecialPattern('FS#\d+',$mode,'plugin_fslink');
+        $this->Lexer->addSpecialPattern('QB#\d+',$mode,'plugin_fslink');
         $this->Lexer->addSpecialPattern('bug \d+',$mode,'plugin_fslink');
     }
  

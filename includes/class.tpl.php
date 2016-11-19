@@ -191,7 +191,7 @@ function tpl_tasklink($task, $text = null, $strict = false, $attrs = array(), $t
     }
 
     if (is_null($text)) {
-        $text = sprintf('FS#%d - %s', $task['task_id'], Filters::noXSS($summary));
+        $text = sprintf('QB#%d - %s', $task['task_id'], Filters::noXSS($summary));
     } elseif(is_string($text)) {
         $text = htmlspecialchars(utf8_substr($text, 0, 64), ENT_QUOTES, 'utf-8');
     } else {
@@ -863,7 +863,7 @@ class TextFormatter
             //$text = ' ' . nl2br($text) . ' ';
             
             // Change FS#123 into hyperlinks to tasks
-            return preg_replace_callback("/\b(?:FS#|bug )(\d+)\b/", 'tpl_fast_tasklink', trim($text));
+            return preg_replace_callback("/\b(?:QB#|bug )(\d+)\b/", 'tpl_fast_tasklink', trim($text));
         }
     }
 
